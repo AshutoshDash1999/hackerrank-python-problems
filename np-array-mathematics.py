@@ -6,16 +6,14 @@ import numpy as np
 first_input = input().strip().split()
 N = int(first_input[0])
 M = int(first_input[1])
-A = []
-B = []
+A = np.zeros((N,M), int)
+B = np.zeros((N,M), int)
 
 for i in range(N):
-    A_list = list(map(int, input().strip().split()))
-    A.append(A_list)
+    A[i] = list(map(int, input().strip().split()))
 
 for i in range(N):
-    B_list = list(map(int, input().strip().split()))
-    B.append(B_list)
+    B[i] = list(map(int, input().strip().split()))
 
 A = np.array(A)
 B = np.array(B)
